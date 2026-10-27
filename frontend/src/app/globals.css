@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --muted: #64748b;
+}
+
+.dark {
+  --bg: #0b1120;
+  --card: #131c31;
+  --border: #24304a;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.card {
+  @apply rounded-2xl border shadow-sm p-5;
+  background: var(--card);
+  border-color: var(--border);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.skeleton {
+  @apply animate-pulse rounded-xl;
+  background: var(--border);
+}
+
+.ai-md h2 {
+  @apply text-lg font-bold mt-4 mb-2 flex items-center gap-2;
+}
+.ai-md h3 {
+  @apply text-base font-semibold mt-3 mb-1;
+}
+.ai-md p {
+  @apply my-2 leading-relaxed;
+}
+.ai-md ul {
+  @apply list-disc pl-5 my-2 space-y-1;
+}
+.ai-md li {
+  @apply leading-relaxed;
+}
+.ai-md strong {
+  @apply font-semibold;
+}
